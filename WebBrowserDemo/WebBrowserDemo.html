@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<!--STATUS OK-->
+<HTML>
+<HEAD>
+    <META content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <META http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <TITLE>Test WebBrowser</TITLE>
+
+    <style>
+        html {
+            -ms-content-zooming: none;
+            -ms-touch-action: pan-y;
+        }
+        ::-webkit-scrollbar {
+            width: 10px; /*对垂直流动条有效*/
+            height: 10px; /*对水平流动条有效*/
+        }
+
+        /*定义滚动条的轨道颜色、内阴影及圆角*/
+        ::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: rosybrown;
+            border-radius: 3px;
+        }
+
+
+        /*定义滑块颜色、内阴影及圆角*/
+        ::-webkit-scrollbar-thumb {
+            border-radius: 7px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #E8E8E8;
+        }
+
+        /*定义两端按钮的样式*/
+        ::-webkit-scrollbar-button {
+            background-color: cyan;
+        }
+
+        /*定义右下角汇合处的样式*/
+        ::-webkit-scrollbar-corner {
+            background: khaki;
+        }
+    </style>
+    <script language="JavaScript">
+        document.oncontextmenu = function (e) {
+            return false;
+        };
+
+        function ReLoadPage() {
+            window.external.notify("Notify");
+        }
+    </script>
+</HEAD>
+
+
+
+<body id="body" onselectstart="return false" style="background-color:white;">
+    <div class="bi">
+        <h1 style="margin:0 auto">WebView control for WPF</h1>
+        <h2 style="margin:0 auto">Security</h2>
+        <ul style="margin:0 auto">
+            <li>
+                <p><strong>WebView</strong> controls don't render in XAML Browser Applications (XBAP).</p>
+                <p>444That's because a browser has partial trust to the system while WebView controls have full-trust.</p>
+            </li>
+            <li>
+                <p>Content in the <strong>WebView</strong> can be blocked even if the user responds to a system prompt by providing permission to the control.</p>
+                <p>This can happen if the Win32WebViewHost (or &quot;Desktop Web App Viewer&quot; in Insider builds) application is disabled in the location settings of the user's system. To resolve the issue, users can open those settings and enable the Win32WebViewHost (or &quot;Desktop Web App Viewer&quot; in Insider builds) application.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls won't function as expected in a WPF-based ClickOnce application.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls function only in applications that use a Single-Threaded Apartment (STA) model. Multithreaded Apartment (MTA) model is not supported.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls have not been tested for Windows Information Protection. Therefore, the information that moves in and out of the WebView control might not be properly secured even if an  organizational administrator applies a Windows Information Protection policy to the hosting application.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+            </li>
+            <li>
+                <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+            </li><li>
+    <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+</li><li>
+    <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+</li><li>
+    <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+</li><li>
+    <p><strong>WebView</strong> controls have not been exhaustively tested for security.</p>
+</li>
+        </ul>
+    </div>
+    <button onclick="OnBtnClick()">notify</button>
+ <button onclick="OnBtnClick1()">notify1</button>
+</body>
+</HTML>
+
+

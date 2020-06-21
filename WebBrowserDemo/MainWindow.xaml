@@ -1,0 +1,77 @@
+﻿<Window
+    x:Class="WebBrowserDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WebBrowserDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+    Title="MainWindow"
+    Width="1020"
+    Height="950"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation
+                        Storyboard.TargetProperty="Opacity"
+                        From="0"
+                        To="1"
+                        Duration="00:00:0.2" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="Window.Unloaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation
+                        Storyboard.TargetProperty="Opacity"
+                        From="1"
+                        To="0"
+                        Duration="00:00:0.3" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,20" Orientation="Horizontal">
+            <Button
+                x:Name="register"
+                Width="110"
+                Height="25"
+                Margin="10,0"
+                Background="Transparent"
+                Click="register_Click"
+                Content="修改注册表" />
+            <Button
+                x:Name="cancel"
+                Width="110"
+                Height="25"
+                Margin="10,0"
+                Background="Transparent"
+                Click="cancel_Click"
+                Content="还原注册表" />
+            <Button
+                x:Name="Refresh"
+                Width="110"
+                Height="25"
+                Margin="10,0"
+                Background="Transparent"
+                Click="Refresh_Click"
+                Content="重新加载" />
+        </StackPanel>
+        <Border
+            x:Name="wbPanl"
+            Grid.Row="1"
+            Margin="10">
+            <WebBrowser Source="C:\Users\Administrator.WIN-9F7LPS9D99I\Desktop\WebBrowserDemo\WebBrowserDemo\WebBrowserDemo.html" />
+        </Border>
+
+    </Grid>
+</Window>
